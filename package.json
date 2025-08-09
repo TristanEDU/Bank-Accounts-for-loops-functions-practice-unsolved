@@ -2,6 +2,7 @@
   "name": "for-loops-functions-practice",
   "version": "1.0.0",
   "description": "The for loops exercises set",
+  "type": "module",
   "main": "part1.js",
   "scripts": {
     "test-all": "vitest --run",

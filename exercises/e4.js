@@ -4,12 +4,32 @@
 // findMaxValueInArray([2, 45, 32, 3, 0, 46, 12]) => 46
 
 export function findMinValueInArray(array) {
+  // const { arr } = array;
   // Your code goes here...
+  let min = Infinity;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < min) {
+      min = array[i];
+    }
+  }
+  return min;
 }
 
+// console.log(findMinValueInArray([2, 45, 32, 3, 0, 46, 12]));
+
 export function findMaxValueInArray(array) {
+  // let max = Infinity;
   // Your code goes here...
+  let max = -Infinity;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > max) {
+      max = array[i];
+    }
+  }
+  return max;
 }
+
+// console.log(findMaxValueInArray([2, 45, 32, 3, 0, 46, 12]));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"
