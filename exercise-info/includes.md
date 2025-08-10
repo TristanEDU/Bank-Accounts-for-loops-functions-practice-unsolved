@@ -14,9 +14,12 @@ const isValueOfFiveInThere = array1.includes(5);
 For this exercise we want you to build a isArrayIncludes() function that solves the same task with **for loops ONLY**.
 
 A isArrayIncludes() function should
-* Take an array and a value as arguments (2)
-* Return boolean that stands fo that fact that the array includes the value or not.
+
+- Take an array and a value as arguments (2)
+- Return boolean that stands fo that fact that the array includes the value or not.
 
 ---
+
 #### Resources
+
 [Array includes() docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
