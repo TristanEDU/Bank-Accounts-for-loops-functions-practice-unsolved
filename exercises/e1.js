@@ -4,8 +4,11 @@
 
 export function getFirstTenNumbers() {
   // Your code goes here...
-  const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  return num;
+  let newArr = [];
+  for (let i = 1; i <= 10; i++) {
+    newArr.push(i);
+  }
+  return newArr;
 }
 
 // console.log(getFirstTenNumbers);
@@ -13,3 +16,9 @@ export function getFirstTenNumbers() {
 // Once you're finished run the test with "npm run test-1"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
+
+/* export function getFirstTenNumbers() {
+  // Your code goes here...
+  const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  return num;
+} */

@@ -10,6 +10,27 @@
 // ]
 
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
+  let userDepositsUnder2000 = [];
+  for (let user of array) {
+    let userTotal = 0;
+    if (user.deposits) {
+      for (let deposit of user.deposits) {
+        userTotal += deposit;
+      }
+    }
+    if (userTotal < 2000) userDepositsUnder2000.push(user);
+  }
+  return userDepositsUnder2000;
+}
+
+// import { bankAccounts } from "../data/data.js";
+// getAllAccountsWithSumsOfDepositsLess2000(bankAccounts);
+// === TEST YOURSELF ===
+// Once you're finished run the test with "npm run test-13"
+// If the test has all tests passed, switch to the next exercise file
+// If any of the tests fails, refactor the code and run the test command after you've fixed the function
+
+/* export function getAllAccountsWithSumsOfDepositsLess2000(array) {
   let sumLess2000 = [];
 
   for (let i = 0; i < array.length; i++) {
@@ -35,11 +56,4 @@ export function getAllAccountsWithSumsOfDepositsLess2000(array) {
   }
   console.log(sumLess2000);
   return sumLess2000;
-}
-
-// import { bankAccounts } from "../data/data.js";
-// getAllAccountsWithSumsOfDepositsLess2000(bankAccounts);
-// === TEST YOURSELF ===
-// Once you're finished run the test with "npm run test-13"
-// If the test has all tests passed, switch to the next exercise file
-// If any of the tests fails, refactor the code and run the test command after you've fixed the function
+ */

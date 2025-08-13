@@ -7,35 +7,18 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-  let sums = [];
-  let arr = [];
-  for (let i = 0; i < array.length; i++) {
-    // console.log(i, "Array position", array[i]);
-    if (array[i].withdrawals !== undefined) {
-      arr.push(array[i].withdrawals);
-    } /* (array[i].withdrawals === undefined) */ else {
-      arr.push([0.0]);
-    }
-  }
-  for (let n = 0; n < arr.length; n++) {
-    // console.log("begin for loop");
-    // console.log(n, "arr", arr /*, "second loop position", arr[n] */);
-    let sum = arr[n];
-    let s = 0;
-    // console.log("sum", sum);
-    // console.log("sum 1", sum);
-    for (let x = 0; x < sum.length; x++) {
-      // console.log("sum x", sum[x]);
-      s += sum[x];
-      // console.log("this is s", s);
-    }
-    console.log("this is s 2", s);
-    sums.push(s);
-  }
+  let usersWithdrawals = [];
 
-  // console.log("arr", arr);
-  console.log("sums", sums);
-  return sums;
+  for (let user of array) {
+    let usersWithdrawals = 0;
+    if (user.withdrawls) {
+      for (let amount of user.withdrawls) {
+        userWithdrawals += +amount;
+      }
+    }
+    usersWithdrawals.push(userWithdrawals);
+  }
+  return usersWithdrawals;
 }
 
 // getAllWithdrawals(bankAccounts);
@@ -43,3 +26,26 @@ export function getAllWithdrawals(array) {
 // Once you're finished run the test with "npm run test-11"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
+
+/* export function getAllWithdrawals(array) {
+  // Your code goes here...
+  let sums = [];
+  let arr = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].withdrawals !== undefined) {
+      arr.push(array[i].withdrawals);
+    } else {
+      arr.push([0.0]);
+    }
+  }
+  for (let n = 0; n < arr.length; n++) {
+    let sum = arr[n];
+    let s = 0;
+    for (let x = 0; x < sum.length; x++) {
+      s += sum[x];
+    }
+    sums.push(s);
+  }
+
+  return sums;
+} */

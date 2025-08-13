@@ -14,28 +14,15 @@ export function getClientWithLeastPositiveBalance(array) {
     if (array[i].balance < min && array[i].balance > 0) {
       min = array[i].balance;
       lowest.push(min);
-      console.log(min);
-    } /* else {
-      return [];
-    } */
+    }
   }
-  /*  if (i == array.length && min !== Array) {
-      console.log("This is min 1", min);
-      // let min = [];
-      console.log("This is min 2", min);
-      return [];
-    } */
 
   for (let i = 0; i < array.length; i++) {
-    // console.log("I am just trying to see where we are at...");
     if (array[i].balance === min) {
-      // console.log("this is a test", array[i]);
       return [array[i]];
     }
   }
   return [];
-  // console.log("second min", min);
-  // return lowest;
 }
 
 // console.log(getClientWithLeastPositiveBalance(bankAccounts));

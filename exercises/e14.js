@@ -7,6 +7,38 @@
 export function getClientsWithWrongBalance(array) {
   // Your code goes here...
   let badAccounts = [];
+  for (let user of array) {
+    let userDeposits = 0;
+    let userWithdrawals = 0;
+    if (user.deposits) {
+      for (let deposit of user.deposits) {
+        userDeposits += deposit;
+      }
+    }
+    if (user.withdrawals) {
+      for (let withdrawal of user.withdrawals) {
+        userWithdrawals += withdrawal;
+      }
+    }
+    if (userDeposits - userWithdrawals !== user.balance) {
+      badAccounts.push(user);
+    }
+  }
+  // console.log(badAccounts);
+  return badAccounts;
+}
+
+// import { bankAccounts } from "../data/data.js";
+// getClientsWithWrongBalance(bankAccounts);
+
+// === TEST YOURSELF ===
+// Once you're finished run the test with "npm run test-14"
+// If the test has all tests passed, switch to the next exercise file
+// If any of the tests fails, refactor the code and run the test command after you've fixed the function
+
+/* export function getClientsWithWrongBalance(array) {
+  // Your code goes here...
+  let badAccounts = [];
   for (let i = 0; i < array.length; i++) {
     let account = array[i];
     let deposit = account.deposits;
@@ -34,9 +66,7 @@ export function getClientsWithWrongBalance(array) {
       for (let n = 0; n < withdrawals.length; n++) {
         withdrawalsSum += withdrawals[n];
       }
-    } /* else {
-        balance = 0;
-      } */
+    } 
 
     if (depositSum >= withdrawalsSum) {
       balance = depositSum - withdrawalsSum;
@@ -84,21 +114,12 @@ export function getClientsWithWrongBalance(array) {
 
     if (
       account.balance ===
-      balance /* || (balance === 0 && account.balance === 0) */
+      balance 
     ) {
-      // console.log(account.id, "hurray! Your account makes sense!");
     } else {
       badAccounts.push(account);
     }
   }
   console.log(badAccounts);
   return badAccounts;
-}
-
-// import { bankAccounts } from "../data/data.js";
-// getClientsWithWrongBalance(bankAccounts);
-
-// === TEST YOURSELF ===
-// Once you're finished run the test with "npm run test-14"
-// If the test has all tests passed, switch to the next exercise file
-// If any of the tests fails, refactor the code and run the test command after you've fixed the function
+} */

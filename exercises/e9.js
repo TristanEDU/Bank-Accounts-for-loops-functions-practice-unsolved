@@ -5,6 +5,22 @@
 
 export function getClientsWithBalanceOverOneHundred(array) {
   // Your code goes here...
+  let userOver100 = [];
+  for (let user of array) {
+    if (user.balance > 100) {
+      userOver100.push(user);
+    }
+  }
+  return userOver100;
+}
+
+// === TEST YOURSELF ===
+// Once you're finished run the test with "npm run test-9"
+// If the test has all tests passed, switch to the next exercise file
+// If any of the tests fails, refactor the code and run the test command after you've fixed the function
+
+/* export function getClientsWithBalanceOverOneHundred(array) {
+  // Your code goes here...
   let arr = [];
   let bank = array.length;
   for (let i = 0; i < bank; i++) {
@@ -15,9 +31,4 @@ export function getClientsWithBalanceOverOneHundred(array) {
     }
   }
   return arr;
-}
-
-// === TEST YOURSELF ===
-// Once you're finished run the test with "npm run test-9"
-// If the test has all tests passed, switch to the next exercise file
-// If any of the tests fails, refactor the code and run the test command after you've fixed the function
+} */

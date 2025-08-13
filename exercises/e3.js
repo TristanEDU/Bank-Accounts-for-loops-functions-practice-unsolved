@@ -10,16 +10,12 @@
 export function getAverage(array) {
   // Your code goes here...
   let sum = 0;
-  let i = 0;
   for (let i = 0; i < array.length; i++) {
     sum += array[i];
-    // console.log(sum);
   }
-  // console.log(sum);
   return sum / array.length;
 }
 
-// getAverage([5, 2, 8]);
 /**
  * PART 2
  * Create a getStringSum(str) function that returns the sum of any integers that are in the string.
@@ -30,7 +26,6 @@ export function getAverage(array) {
 export function getStringSum(str) {
   let arr = [];
   let sum = 0;
-  let i = 0;
   for (let i = 0; i <= str.length; i++) {
     if (Number(str[i])) {
       arr.push(Number(str[i]));
@@ -39,7 +34,6 @@ export function getStringSum(str) {
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
-  console.log(sum);
   return sum;
 }
 
